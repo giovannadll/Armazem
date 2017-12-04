@@ -3,13 +3,22 @@
 int main() 
 {
     /** preço de 10 produtos armazenados em um vetor */
-    float produtos[10];
+
+    float produtos[10] = {10,22,33,44,55,66,77,88,99,100};
 
     /** código de 5 armazéns */
-    int arm[5];
+
+    int arm[5] = {43,53,2132,32,111};
     
     /** quantidade estocada em cada um desses produtos em cinco armazéns diferentes */
-    int mat[5][10];
+
+    int mat[5][10] = {
+        {1,2,3,4,5,6,7,8,9,10},
+        {1,2,3,4,5,6,7,8,9,14},
+        {-10,22,300,43,552,336,721,83,91,10},
+        {-10,22,300,2001,5123,2001,73,84,92,10},
+        {1,2,3,4,5,6,7,8,9,10}
+    };
 
     /** lista de custos dos armazéns **/
     float listaCustoArm[5]; 
@@ -35,26 +44,6 @@ int main()
     /** vetor para a soma dos produtos de cada armazem **/ 
     int vetSomaProd[5];
 
-    /** recebendo os valores dos produtos */
-
-    for(int i=0;i<10;i++)
-    {
-        printf("Informe o valor do produto %i: ", i);
-        scanf("%f", &produtos[i]);
-    }
-
-    printf("\n\n\n");
-
-    /** recebendo os valores dos armazéns */
-
-    for(int i=0;i<5;i++)
-    {
-        printf("Informe o código do armazém %i: ", i);
-        scanf("%d", &arm[i]);
-    }
-
-    printf("\n\n\n");
-
     /** recebendo a quantidade estocada */
     for(int i=0;i<5;i++)
     {
@@ -62,9 +51,6 @@ int main()
 
         for(int j=0;j<10;j++)
         {
-            printf("Informe a quantidade do produto %i no armazem %i: ", j, i);
-            scanf("%d", &mat[i][j]);
-
             /** B) somando */
             somaP += mat[i][j];
 
