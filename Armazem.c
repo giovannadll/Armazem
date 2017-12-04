@@ -35,9 +35,12 @@ int main()
     /** vetor para a soma dos produtos de cada armazem **/ 
     int vetSomaProd[5];
 
+    int i;
+    int j;
+
     /** recebendo os valores dos produtos */
 
-    for(int i=0;i<10;i++)
+    for(i=0;i<10;i++)
     {
         printf("Informe o valor do produto %i: ", i);
         scanf("%f", &produtos[i]);
@@ -47,7 +50,7 @@ int main()
 
     /** recebendo os valores dos armazéns */
 
-    for(int i=0;i<5;i++)
+    for(i=0;i<5;i++)
     {
         printf("Informe o código do armazém %i: ", i);
         scanf("%d", &arm[i]);
@@ -56,11 +59,11 @@ int main()
     printf("\n\n\n");
 
     /** recebendo a quantidade estocada */
-    for(int i=0;i<5;i++)
+    for(i=0;i<5;i++)
     {
         int somaProdutoE = 0;
 
-        for(int j=0;j<10;j++)
+        for(j=0;j<10;j++)
         {
             printf("Informe a quantidade do produto %i no armazem %i: ", j, i);
             scanf("%d", &mat[i][j]);
@@ -94,9 +97,9 @@ int main()
 
     printf("\n");
 
-    for(int i=0;i<5;i++)
+    for(i=0;i<5;i++)
     {
-        for(int j=0;j<10;j++)
+        for(j=0;j<10;j++)
         {
             printf("\nQuantidade do produto %i no armazém %i: %i ", j, i, mat[i][j]);
         }
@@ -121,7 +124,7 @@ int main()
     printf("\n\n ** O menor estoque armazenado é: %i", menorE);
     printf("\n\n ** Os Codigos dos Armazéns com menor estoque são: ");
 
-    for(int i=0; i<5; i++)
+    for(i=0; i<5; i++)
     {
         if(vetSomaProd[i] == menorE)
         {
@@ -136,7 +139,7 @@ int main()
 
     printf("\n\n ** Os Custos dos Armazéns são: ");
 
-    for(int i=0; i<5; i++)
+    for(i=0; i<5; i++)
     {
         printf("\n\nCódigo do Armazém: %i", arm[i]);
         printf("\nCusto do Armazém: R$ %.2f", listaCustoArm[i]);
@@ -155,7 +158,7 @@ int main()
         scanf("%d", &codigoArmazem);
 
         /** verifica se código do armazém existe */
-        for (int i = 0; i < 5; i++)
+        for (i = 0; i < 5; i++)
         {
             if (arm[i] == codigoArmazem)
             {
@@ -175,7 +178,7 @@ int main()
             /** soma quantidade de produtos com preço entre 50 e 100 reais */
             int quantidadeProdutosPrecoMedio = 0;
 
-            for (int i = 0; i < 10; i++) {
+            for (i = 0; i < 10; i++) {
                 int valorProduto = produtos[i];
                 if (valorProduto > 50.00 && valorProduto <= 100.00)
                 {
